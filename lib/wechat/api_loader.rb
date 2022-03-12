@@ -20,8 +20,8 @@ module Wechat
           Wechat::Api.new(c.appid, c.secret, token_file, c.timeout, c.skip_verify_ssl, js_token_file)
         end
       elsif c.corpid && c.corpsecret && token_file.present?
-        if c.agentid && c.agentsecret
-          Wechat::AgentApi.new(c.corpid, c.agentsecret, c.agentid, token_file, c.timeout, c.skip_verify_ssl, js_token_file)
+        if c.agentid
+          Wechat::AgentApi.new(c.corpid, c.corpsecret, c.agentid, token_file, c.timeout, c.skip_verify_ssl, js_token_file)
         else
           Wechat::CorpApi.new(c.corpid, c.corpsecret, token_file, c.timeout, c.skip_verify_ssl, js_token_file)
         end
