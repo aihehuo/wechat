@@ -2,8 +2,8 @@
 
 require 'wechat/api_base'
 require 'wechat/http_client'
-require 'wechat/token/corp_access_token'
-require 'wechat/ticket/corp_jsapi_ticket'
+require 'wechat/token/agent_access_token'
+require 'wechat/ticket/agent_jsapi_ticket'
 
 module Wechat
   class AgentApi < ApiBase
